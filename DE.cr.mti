@@ -1,0 +1,43 @@
+D:/DE/mem_block2.v {1 {vlog -work work -vopt -stats=none D:/DE/mem_block2.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mem_new
+
+Top level modules:
+	mem_new
+
+} {} {}} D:/DE/mem_tb.v {1 {vlog -work work -vopt -stats=none {D:\DE\mem_tb.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mem_tb
+
+Top level modules:
+	mem_tb
+
+} {} {}} D:/DE/test_pipe.v {1 {vlog -work work -vopt -stats=none D:/DE/test_pipe.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module testbench_pipe
+
+Top level modules:
+	testbench_pipe
+
+} {} {}} D:/DE/mem_block.v {1 {vlog -work work -vopt -stats=none D:/DE/mem_block.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module mem
+
+Top level modules:
+	mem
+
+} {} {}} D:/DE/test_mem.v {1 {vlog -work work -vopt -stats=none {D:\DE\test_mem.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module read_write_file
+
+Top level modules:
+	read_write_file
+
+} {} {}} D:/DE/block_ppl.v {1 {vlog -work work -vopt -stats=none D:/DE/block_ppl.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module block_ppl
+
+Top level modules:
+	block_ppl
+
+} {} {}}

@@ -1,0 +1,45 @@
+module read_write_file();
+	integer fp_r;
+	integer count;
+    reg clk;
+	wire[15:0] data_read;
+    reg[15:0] data_write;
+    reg [95:0]tmp;
+    integer i;
+    initial begin
+        fp_r=$fopen("data_in.txt","r");
+        i = 0;
+        clk = 0;
+    end
+
+	//fp_w=$fopen("data_out.txt","w");
+    always@(posedge clk)
+        begin
+        $display("Hello");
+			while(! $feof(fp_r))
+				begin
+                $display("inwhile");
+                    if (i == 0)
+                    begin
+                        count = $fscanf(fp_r,"%d" ,tmp) ;
+                        $display("%d",tmp) ;
+                    end
+                    else
+                    begin
+					    count = $fscanf(fp_r,"%d" ,data_write) ;
+					    $display("%d",data_write) ;
+                    end
+					//$fwrite(fp_w,"%b\n",reg1) ;
+                    i = i + 1;
+				end
+
+			$fclose(fp_r);//关闭已打开的文件
+			//$fclose(fp_w);
+		end
+
+    always #20 clk <= ~clk;//半周期为20ns,全周期为40ns的一个信号
+
+    mem m(data_write, clk, mode, data_read);
+endmodule
+
+//mazm
